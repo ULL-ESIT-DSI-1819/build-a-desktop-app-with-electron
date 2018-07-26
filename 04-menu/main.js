@@ -10,6 +10,7 @@ app.on('ready', () => {
     show: false
   });
   mainWindow.loadURL(path.join('file://', __dirname, 'index.html'));
+  //mainWindow.loadFile(path.join(__dirname, 'index.html'));
   mainWindow.on('ready-to-show', () => {
     mainWindow.show();
     // Launch fullscreen with DevTools open, usage: npm run debug
