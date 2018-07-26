@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "../node_modules/.bin/electron main.js"
+    "start": "../node_modules/.bin/electron main.js",
+    "debug": "../node_modules/.bin/electron main.js --debug"
   },
   "keywords": [],
   "author": "",

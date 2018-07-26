@@ -1,4 +1,9 @@
+const util = require("util");
+const ins = (x) => util.inspect(x, {depth: null});
+
+// See https://electronjs.org/docs/api/menu
 const { app, Menu } = require('electron');
+
 const isWindows = process.platform === 'win32';
 
 module.exports = {
@@ -32,6 +37,11 @@ function setMainMenu() {
       ]
     }
   ];
+  console.log(ins(template));
+  // Generally, the template is just an array of options for constructing a MenuItem.
   const menu = Menu.buildFromTemplate(template);
+  console.log(ins(menu));
+  // Sets menu as the application menu on macOS. On Windows and Linux, the menu
+  // will be set as each window's top menu.
   Menu.setApplicationMenu(menu);
 }
